@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&family=Roboto&family=Source+Sans+Pro:wght@300;400&display=swap');
+
+:root {
+    font-size: 16px;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --transition-speed: 600ms;
+    width: 100vw;
+}
+
+
+.banner {
+    background-color: rgba(255, 215, 111, 0.89);
+    width: 100%;
+    border-bottom: 0.5em solid #000000;
+    border-top: 0.5em solid #000000;
+    background-size: cover;
+}
+
+.banner img {
+    max-width: 55vh;
+}
+
+hr {
+    border-style: double;
+    border-color: black;
+}
+
+main {
+    padding-left: 2rem;
+}
+
+body {
+    font: 13px "Source Sans Pro", Arial, Helvetica, sans-serif;
+    /*background-color: #c1605c;*/
+    /*background-image: url("https://wallpapercave.com/wp/wp3757144.jpg");*/
+    color: #ffffff;
+    text-align: center;
+    height: 100vh;
+    min-width: 100vw;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 350ms ease;
+    overflow: hidden;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.fa-primary {
+    color: #ff7eee;
+}
+
+.fa-secondary {
+    color: #df49a6;
+}
+
+.fa-primary,
+.fa-secondary {
+    transition: var(--transition-speed);
+}
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+
+.logo svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+}
+
+.logo-text {
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+    transform: rotate(-180deg);
+}
+
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    main {
+        padding-left: 0;
+    }
+
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: inline;
+    }
+
+    .navbar:hover .logo svg {
+        margin-left: 11rem;
+    }
+
+    .navbar:hover .logo-text {
+        left: 0px;
+    }
+
+    .moving-letters {
+        transform: translate(2rem, 0);
+    }
+
+    .reg-form,
+    .login-form,
+    .container{
+        margin-left: 2.2rem;
+    }
+
+}
+
+/*scrollbar settings*/
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0.7rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(148, 148, 180, 0.75);
+    border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(207, 207, 243, 0.75);
+}
+
+.graphContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.graph1 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    /* height: 300px; */
+}
+
+.graph2 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    /* height: 300px; */
+}
+
+.summaryReport {
+    display: inline-block;
+    text-align: center;
+}
+
+/* The alert message box */
+.alert-error {
+    width: 500px;
+    /* height: 50px; */
+    margin: auto;
+    padding: 20px;
+    background-color: #DC3545;
+    /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+.alert-success {
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #4CAF50;
+    /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}

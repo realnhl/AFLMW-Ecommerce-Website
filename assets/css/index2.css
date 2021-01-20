@@ -1,0 +1,199 @@
+/*title animation settings*/
+
+.ml15 {
+    background-color: white;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 10rem;
+    font-weight: 800;
+    font-size: 3.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+}
+
+.ml15 .word {
+    position: relative;
+    display: inline-block;
+    line-height: 2em;
+    color: #735627;
+    font-family: 'Comfortaa', cursive;
+}
+
+.moving-letters {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+/*Scrolling effect settings here*/
+
+.head-img-1,
+.head-img-2 {
+    position: relative;
+    opacity: 0.7;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.head-img-1 {
+    background-image: url("https://images.pexels.com/photos/3957582/pexels-photo-3957582.jpeg");
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.head-img-2 {
+    background-image: url("https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg");
+    min-height: 400px;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span.border {
+    background-color: #3f3937;
+    color: #ffffff;
+    padding: 1.5rem;
+    font-size: 25px;
+    letter-spacing: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h3 {
+    text-align: center;
+    border-bottom: 0.2rem solid #000000;
+    border-top: 0.2rem solid #000000;
+    line-height: 3em;
+    font-size: 2em;
+    font-family: 'Source Sans Pro', 'Extra-light 200', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.slogan {
+    font-family: 'Roboto', 'Regular 400', sans-serif;
+    font-size: 1.2em;
+}
+
+.slogan p {
+    text-align: center;
+    line-height: 4vh;
+}
+
+.img-container {
+    color: #ddd;
+    background-color: #282E34;
+    padding: 60px 80px;
+    text-align: justify;
+}
+
+.imgslider {
+    width: 70vw;
+    height: 65vh;
+    position: center;
+}
+
+slider {
+    width: 100%;
+    height: 60vh;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    position: center;
+}
+
+slider>* {
+    position: absolute;
+    display: block;
+    background: #1f1f1f;
+    animation: slide 12s infinite;
+    overflow: hidden;
+}
+
+slide:nth-child(1) {
+    left: 0%;
+    animation-delay: -1s;
+    background-image: url("https://images.pexels.com/photos/274973/pexels-photo-274973.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: center;
+}
+
+slide:nth-child(2) {
+    animation-delay: 2s;
+    background-image: url("https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: center;
+    left: 100%;
+}
+
+slide:nth-child(3) {
+    animation-delay: 5s;
+    background-image: url("https://images.pexels.com/photos/3014013/pexels-photo-3014013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: center;
+    left: 100%;
+}
+
+slide:nth-child(4) {
+    animation-delay: 8s;
+    background-image: url("https://images.pexels.com/photos/1002634/pexels-photo-1002634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: center;
+    left: 100%;
+}
+
+slide p {
+    font-family: 'Source Sans Pro', 'Extra-light 200', sans-serif;
+    font-weight: lighter;
+    font-size: 70px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 340px;
+    color: #fff;
+}
+
+@keyframes slide {
+    0% {
+        left: 100%;
+        width: 100%;
+    }
+
+    5% {
+        left: 0%;
+    }
+
+    25% {
+        left: 0%;
+    }
+
+    30% {
+        left: -100%;
+        width: 100%;
+    }
+
+    30.0001% {
+        left: -100%;
+        width: 0%;
+    }
+
+    100% {
+        left: 100%;
+        width: 0%;
+    }
+}
